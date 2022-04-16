@@ -18,7 +18,7 @@ const Header = () => {
                     open ? <XIcon></XIcon> : <MenuAlt1Icon ></MenuAlt1Icon>
                 }
             </div>
-            <ul className={`md:flex items-center text-lg duration-500 ease-out absolute md:static md:justify-end py-5  bg-white w-full  ${open ? 'top-20' : 'top-[-300px]'}`}>
+            <ul className={`md:flex items-center text-lg z-30 duration-500 ease-out absolute md:static md:justify-end py-5  bg-white w-full  ${open ? 'top-20' : 'top-[-300px]'}`}>
                 <li className='ml-4  hover:text-red-600'><CustomLink className='pb-1' to='/'>Home</CustomLink></li>
                 <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/blog'>Blog</CustomLink></li>
                 <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/sign-in'>Sign In</CustomLink></li>
