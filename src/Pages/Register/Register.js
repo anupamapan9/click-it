@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../src/firebase.init'
+// import { async } from '@firebase/util';
 const Register = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -13,15 +16,22 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
-    const handelCreateUser = (e) => {
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateProfileError] = useUpdateProfile(auth)
+    const handelCreateUser = async (e) => {
         e.preventDefault()
-        createUserWithEmailAndPassword(email, password)
+        if (password === confirmPassword) {
+            await createUserWithEmailAndPassword(email, password);
+            await updateProfile({ displayName: name });
+            toast('Updated profile');
+        }
+
     }
 
     return (
         <section className='flex h-[80vh] justify-center items-center'>
             <div className='md:w-[400px]  border-2 shadow-lg shadow-red-500 px-14 py-9'>
+                <ToastContainer />
                 <h1 className='font-extrabold text-2xl'>
                     Register
                 </h1>
