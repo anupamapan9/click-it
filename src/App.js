@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Banner from './Pages/Home/Banner/Banner';
 import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/Register/Register';
 import Header from './Sheared/Header/Header'
