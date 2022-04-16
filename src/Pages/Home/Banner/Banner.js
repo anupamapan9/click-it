@@ -1,10 +1,9 @@
 import React from 'react';
-
 const Banner = () => {
     return (
-        <section>
+        <div>
 
-        </section>
+        </div>
     );
 };
 
