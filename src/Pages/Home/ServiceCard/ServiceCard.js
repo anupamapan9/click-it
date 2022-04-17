@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ServiceCard = ({ service }) => {
     const { img, name, description, price } = service
     return (
-        <div className='border-2 relative h-[580px] md:h-[500px] shadow-md shadow-slate-400'>
+        <div className='border-2 relative h-[580px] md:h-[430px] lg:h-[600px] shadow-md shadow-slate-400'>
             <div className='flex relative'>
                 <div className='w-full h-full absolute '>
                     <span className='text-white font-bold text-lg z-20 bg-[#ff0000] p-2 m-5 inline-block'>$ {price}</span>
