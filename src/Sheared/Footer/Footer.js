@@ -23,9 +23,9 @@ const Footer = () => {
                 </div>
                 <div>
                     <h1 className='text-2xl font-extrabold mb-6'>Follow Me</h1>
-                    <a href="https://www.facebook.com/"><AiFillFacebook className='inline text-4xl text-[#172B4D]' /> </a>
-                    <a href="https://www.facebook.com/"><AiFillTwitterSquare className='inline text-4xl text-[#1E9BEB]' /> </a>
-                    <a href="https://www.facebook.com/"><AiFillInstagram className='inline text-4xl text-[#D1236B]' /> </a>
+                    <a href="https://www.facebook.com/" ><AiFillFacebook className='inline text-4xl text-[#172B4D]' /> </a>
+                    <a href="https://www.twitter.com/" ><AiFillTwitterSquare className='inline text-4xl text-[#1E9BEB]' /> </a>
+                    <a href="https://www.facebook.com/" ><AiFillInstagram className='inline text-4xl text-[#D1236B]' /> </a>
                     <a href="https://www.facebook.com/"><AiFillLinkedin className='inline text-4xl text-[#172B4D]' /> </a>
                 </div>
             </div>
