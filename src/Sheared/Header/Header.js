@@ -3,8 +3,15 @@ import { CameraIcon, MenuAlt1Icon, XIcon } from '@heroicons/react/solid'
 
 import CustomLink from '../CustomLink/CustomLink';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
     const [open, setOpen] = useState(false);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <nav className='flex bg-white h-[80px] z-50 justify-around items-center md:px-20'>
             <div className='text-red-500 w-24 md:w-36  z-50'>
@@ -19,8 +26,11 @@ const Header = () => {
             <ul className={`md:flex items-center text-lg z-50 duration-500 ease-out absolute md:static md:justify-end py-5  bg-white w-full  ${open ? 'top-20' : 'top-[-300px]'}`}>
                 <li className='ml-4  hover:text-red-600'><CustomLink className='pb-1' to='/'>Home</CustomLink></li>
                 <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/blog'>Blog</CustomLink></li>
-                <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/log-in'>Log In</CustomLink></li>
+
                 <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/about'>About</CustomLink></li>
+                {!user ?
+                    <li className='ml-4 hover:text-red-600'><CustomLink className='pb-1' to='/log-in'>Log In</CustomLink></li> :
+                    <li className='ml-4 px-3 hover:bg-[#ff2121] text-white bg-[#ff0000]'><button className='pb-1' onClick={logout}>Log out</button></li>}
             </ul>
         </nav>
     );
