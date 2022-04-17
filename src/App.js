@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Pages/Home/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/Register/Register';
+import Footer from './Sheared/Footer/Footer';
 import Header from './Sheared/Header/Header'
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/log-in' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
