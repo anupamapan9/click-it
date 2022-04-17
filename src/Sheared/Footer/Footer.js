@@ -5,7 +5,7 @@ import { AiFillFacebook, AiFillTwitterSquare, AiFillInstagram, AiFillLinkedin } 
 const Footer = () => {
     const year = new Date().getFullYear()
     return (
-        <footer className='py-10 bg-gray-700 pl-10'>
+        <footer className='py-10 bg-gray-700 px-10'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-white'>
                 <div>
                     <h2 className='text-2xl font-extrabold mb-6'>PhotoGrapher</h2>
@@ -29,7 +29,8 @@ const Footer = () => {
                     <a href="https://www.facebook.com/"><AiFillLinkedin className='inline text-4xl text-white hover:text-[#ff0000] transition-all' /> </a>
                 </div>
             </div>
-            <p className='text-white text-center pt-5'>All Copyright Reserve &copy; {year}</p>
+            <hr className='my-5' />
+            <p className='text-white text-center '>All Copyright Reserve &copy; {year}</p>
         </footer >
     );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogin from '../../Sheared/SocialLogin/SocialLogin';
 
 const LogIn = () => {
     const [email, setEmail] = useState('')
@@ -28,7 +29,7 @@ const LogIn = () => {
     console.log(error?.message)
 
     return (
-        <section className='flex h-[80vh] justify-center items-center'>
+        <section className='flex h-[80vh] mx-5 justify-center items-center'>
             <div className='md:w-[400px]  border-2 shadow-lg shadow-red-500 px-14 py-9'>
                 <h1 className='font-extrabold text-2xl'>
                     Login
@@ -45,6 +46,7 @@ const LogIn = () => {
                     </div>
                 </form>
                 <p>New Here? <Link className='border-b-2 border-[#fb5050] hover:text-[#ff0000]' to='/register'>Register Now</Link></p>
+                <SocialLogin></SocialLogin>
             </div>
 
         </section>

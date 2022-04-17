@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../src/firebase.init'
+import SocialLogin from '../../Sheared/SocialLogin/SocialLogin';
 // import { async } from '@firebase/util';
 const Register = () => {
     const [name, setName] = useState('')
@@ -29,7 +30,7 @@ const Register = () => {
     }
 
     return (
-        <section className='flex h-[80vh] justify-center items-center'>
+        <section className='flex h-[100vh] justify-center mx-5 items-center'>
             <div className='md:w-[400px]  border-2 shadow-lg shadow-red-500 px-14 py-9'>
                 <ToastContainer />
                 <h1 className='font-extrabold text-2xl'>
@@ -53,6 +54,7 @@ const Register = () => {
                     </div>
                 </form>
                 <p>Have an Account? <Link className='border-b-2 border-[#fb5050] hover:text-[#ff0000]' to='/log-in'>Login</Link></p>
+                <SocialLogin></SocialLogin>
             </div>
 
         </section>
