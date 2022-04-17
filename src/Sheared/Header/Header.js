@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import Logo from '../../images/logo.png'
-// import heroImg from '../../images/hero.png'
 import { CameraIcon, MenuAlt1Icon, XIcon } from '@heroicons/react/solid'
 
 import CustomLink from '../CustomLink/CustomLink';
