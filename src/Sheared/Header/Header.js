@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CameraIcon, MenuAlt1Icon, XIcon } from '@heroicons/react/solid'
+import { MenuAlt1Icon, XIcon } from '@heroicons/react/solid'
 
 import CustomLink from '../CustomLink/CustomLink';
 import { Link } from 'react-router-dom';
