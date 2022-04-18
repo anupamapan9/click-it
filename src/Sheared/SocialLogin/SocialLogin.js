@@ -1,15 +1,23 @@
 import React from 'react';
-import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    // const [signInWithFacebook, userfacebook, loadingFacebook, errorFacebook] = useSignInWithFacebook(auth);
     const handelFbLogIn = () => {
         console.log('not valid')
     }
     const handelGooglLogIn = () => {
         signInWithGoogle()
     }
+    // navigate user --------------------
+    const location = useLocation()
+    const navigate = useNavigate()
+    let from = location.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true })
+    }
+
     return (
         <section>
             <div className='my-5 flex items-center h-1'>
