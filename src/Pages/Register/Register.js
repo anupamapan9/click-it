@@ -6,7 +6,6 @@ import Loading from '../../Sheared/Loading/Loading'
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../src/firebase.init'
 import SocialLogin from '../../Sheared/SocialLogin/SocialLogin';
-// import { async } from '@firebase/util';
 const Register = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -33,6 +32,9 @@ const Register = () => {
         } else {
             setWrongPasswordError('Password Did not match')
         }
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
     return (
         <section className='flex h-[100vh] justify-center mx-5 items-center'>
