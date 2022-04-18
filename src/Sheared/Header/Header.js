@@ -13,7 +13,7 @@ const Header = () => {
         signOut(auth);
     };
     return (
-        <nav className='flex bg-white h-[80px] z-50 justify-around items-center md:px-20'>
+        <nav className='flex bg-white h-[80px] z-20 justify-around items-center md:px-20'>
             <div className='text-red-500 w-24 md:w-36  z-50'>
                 <Link to='/'><img src="https://i.ibb.co/c8BkRxN/logo-removebg-preview-1.png" alt="" /> </Link>
             </div>

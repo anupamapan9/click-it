@@ -52,7 +52,7 @@ const Blog = () => {
             </div>
             <div className='py-5'>
                 <h2 className='text-gray-700 font-extrabold text-2xl'>2. Why are you using firebase? What other options do you have to implement authentication?</h2>
-                <p className='text-lg'>Firebase is used for authentication to maintain the user login system for the website. It can be done by raw code but it is time consume and not much secure. As firebase is a product of GOOGLE inc. It is much secure and easy to use so I am using firebase
+                <p >Firebase is used for authentication to maintain the user login system for the website. It can be done by raw code but it is time consume and not much secure. As firebase is a product of GOOGLE inc. It is much secure and easy to use so I am using firebase
                 </p>
                 <p> <b>There are many other company to implement authentication or alternative of firebase they are :-
                 </b>
@@ -70,10 +70,10 @@ const Blog = () => {
             </div>
             <div className='py-5'>
                 <h2 className='text-gray-700 font-extrabold text-2xl'>3. What other services does firebase provide other than authentication</h2>
-                <p className='text-lg'>
+                <p >
                     Firebase is a authentication solution company. But Beside it they supply many other services:
                 </p>
-                <ul className='list-disc px-5 py-2 text-sm'>
+                <ul className='list-disc px-5 text-sm'>
                     .
                     <li>Cloud Functions.</li>
                     <li>Cloud Firestore</li>

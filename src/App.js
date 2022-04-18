@@ -7,6 +7,7 @@ import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/Register/Register';
 import Footer from './Sheared/Footer/Footer';
 import Header from './Sheared/Header/Header'
+import NotFound from './Sheared/NotFound/NotFound';
 import RequireAuth from './Sheared/RequireAuth/RequireAuth';
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <CheckOut></CheckOut>
           </RequireAuth>}></Route>
         <Route path='blog' element={<Blog></Blog>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
