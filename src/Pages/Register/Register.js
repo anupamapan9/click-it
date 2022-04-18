@@ -27,6 +27,7 @@ const Register = () => {
             await updateProfile({ displayName: name });
             if (!error) {
                 toast('Email Verification Send');
+                navigate('/')
             }
 
         } else {
